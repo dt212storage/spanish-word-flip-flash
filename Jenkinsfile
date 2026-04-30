@@ -29,6 +29,7 @@ pipeline {
                     }
                     steps {
                         // Unit tests with Vitest
+                        sh 'npm ci' // ensure vitest and dependencies are installed in this container
                         sh 'npx vitest run --reporter=verbose'
                     }
                 }
