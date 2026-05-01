@@ -72,6 +72,18 @@ pipeline {
             steps {
                 sh 'npx playwright test'
             }
+             post {
+        always {
+            publishHTML(target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'reports/html-output', // Path to the directory containing your report
+                reportFiles: 'index.html',         // The main file of your report
+                reportName: 'Test Report'          // Name displayed on the Jenkins sidebar
+            ])
+        }
+    }
         }
     }
 }
