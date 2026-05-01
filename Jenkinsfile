@@ -37,7 +37,7 @@ pipeline {
                     agent {
                         docker {
                             image 'mcr.microsoft.com/playwright:v1.54.2-jammy'
-                            reuseNode true
+                            reuseNode false
                         }
                     }
                     steps {
@@ -63,7 +63,7 @@ pipeline {
             agent {
                 docker {
                     image 'mcr.microsoft.com/playwright:v1.54.2-jammy'
-                    reuseNode true
+                    reuseNode false
                 }
             }
             environment {                
