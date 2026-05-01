@@ -78,10 +78,10 @@ pipeline {
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
-                reportDir: 'reports/html-output', // Path to the directory containing your report
+                reportDir: 'reports-e2e/html', // Path to the directory containing your report
                 reportFiles: 'index.html',         // The main file of your report
-                reportName: 'Test Report'          // Name displayed on the Jenkins sidebar
-            ])
+                reportName: 'HTML Report'          // Name displayed on the Jenkins sidebar
+            ])  
         }
     }
         }
